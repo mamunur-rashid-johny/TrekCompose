@@ -147,6 +147,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.compose)
+    implementation(libs.androidx.ui.text.google.fonts)
     debugImplementation(libs.bundles.compose.debug)
     //</editor-fold>
 
