@@ -20,7 +20,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.ProgressIndicatorDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -36,7 +36,6 @@ import androidx.compose.ui.graphics.Shader
 import androidx.compose.ui.graphics.ShaderBrush
 import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -122,7 +121,9 @@ fun SplashScreenLoader(modifier: Modifier = Modifier) {
     }
 
     Row(
-        modifier = modifier.fillMaxWidth().padding(bottom = 50.dp),
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(bottom = 50.dp),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -135,7 +136,7 @@ fun SplashScreenLoader(modifier: Modifier = Modifier) {
 
         Text(
             text = "Trek",
-            style = TextStyle(brush = brush, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+            style = MaterialTheme.typography.bodyMedium.copy(brush = brush, fontWeight = FontWeight.Bold, fontSize = 20.sp),
         )
 
     }

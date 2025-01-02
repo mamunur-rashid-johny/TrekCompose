@@ -27,7 +27,7 @@ android {
         val df: DateFormat = SimpleDateFormat("dd_MMM_yyyy_HH_mm_a")
         val timeStamp = df.format(Date())
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        setProperty("archivesBaseName", "Trek_${versionName}_B_${versionCode}$timeStamp")
+        setProperty("archivesBaseName", "Trek_vc_${versionName}_vn_${versionCode}_$timeStamp")
 
         vectorDrawables {
             useSupportLibrary = true
@@ -64,10 +64,23 @@ android {
 
     //</editor-fold>
 
+    //<editor-fold desc = "SignedIn Config">
+    signingConfigs {
+        create("release"){
+            storeFile = file(keyProperties["keyStorePath"] as String)
+            storePassword = keyProperties["storePassword"] as String
+            keyPassword = keyProperties["keyPassword"] as String
+            keyAlias = keyProperties["kayAlias"] as String
+
+        }
+    }
+    //</editor-fold>
+
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
+            signingConfig = signingConfigs["release"]
+           // isMinifyEnabled = true
+           // isShrinkResources = true
             isDebuggable = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             buildConfigField("String", "BASE_URL", "\"${prodProperties.getProperty("BASE_URL")}\"")
@@ -80,6 +93,7 @@ android {
         debug {
             isDebuggable = true
             applicationIdSuffix = ".dev"
+            versionNameSuffix = "-dev"
             resValue("string","app_name","Trek Debug")
 
             buildConfigField("String", "BASE_URL", "\"${stageProperties.getProperty("BASE_URL")}\"")
@@ -92,6 +106,7 @@ android {
         create("production"){
             initWith(getByName("debug"))
             applicationIdSuffix = ".production"
+            versionNameSuffix = "-production"
             resValue("string","app_name","Trek Prod(d)")
 
             buildConfigField("String", "BASE_URL", "\"${prodProperties.getProperty("BASE_URL")}\"")
@@ -104,6 +119,7 @@ android {
         create("stage"){
             initWith(getByName("debug"))
             applicationIdSuffix = ".stage"
+            versionNameSuffix = "-stage"
             resValue("string","app_name","Trek Stage")
 
             buildConfigField("String", "BASE_URL", "\"${stageProperties.getProperty("BASE_URL")}\"")
@@ -192,7 +208,7 @@ dependencies {
     //</editor-fold>
 
     //<editor-fold desc = "Leak-Canary">
-    implementation(libs.leakcanary.android)
+    debugImplementation(libs.leakcanary.android)
     //</editor-fold>
 
 }
