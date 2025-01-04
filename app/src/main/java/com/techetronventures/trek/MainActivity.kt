@@ -10,6 +10,8 @@ import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -54,7 +56,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             TrekTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SplashScreen(modifier = Modifier.fillMaxSize(), paddingValues = innerPadding)
+                  //  SplashScreen(modifier = Modifier.fillMaxSize(), paddingValues = innerPadding)
+                    val color = if(isSystemInDarkTheme()) Color.Black else Color.White
+                    OnBoardScreen(
+                        modifier = Modifier.fillMaxSize().padding(innerPadding).background(color)
+                    )
                 }
             }
         }
@@ -129,7 +135,7 @@ fun SplashScreenLoader(modifier: Modifier = Modifier) {
     ) {
         CircularProgressIndicator(
             modifier = Modifier.size(20.dp),
-            color = Color.White
+            color = if(isSystemInDarkTheme()) Color.White else Color.Black
         )
 
         Spacer(modifier = Modifier.size(2.dp))

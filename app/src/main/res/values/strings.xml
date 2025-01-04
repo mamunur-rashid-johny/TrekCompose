@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Trek</string>
+
+    <!--On Board Pager Title and Description-->
+    <string name="onboarding_title_1">Welcome to Trek</string>
+    <string name="onboarding_description_1">Your journey towards financial freedom starts here. All investments have risks.</string>
+
+    <string name="onboarding_title_2">No account minimum</string>
+    <string name="onboarding_description_2">Top up your account with as little or as much as you like.</string>
+
+    <string name="onboarding_title_3">Everything at your fingertips</string>
+    <string name="onboarding_description_3">Stay on top of your portfolio with real-time market data, detailed research reports, and updated news on the stock market.</string>
+
+    <string name="onboarding_title_4">Commission-free stock trading</string>
+    <string name="onboarding_description_4">Invest in hundreds of companies across DSE without paying commissions or additional fees with Trek Premium.</string>
+
+    <string name="onboarding_title_5">Easy BO Account Access</string>
+    <string name="onboarding_description_5">Opening a BO account has never been easier. Open a BO Account following a few simple steps and start your investment journey.</string>
+
+    <string name="onboarding_title_6">Trek: Learn. Invest. Grow.</string>
+    <string name="onboarding_description_6">Expand your trading knowledge with our dedicated learning center to make wise investment choices.</string>
+
+    <string name="onboarding_title_7">Account Protection</string>
+    <string name="onboarding_description_7">Trek is powered by NBL Securities Limited. Your investments are protected with encryption and advanced security measures in place.</string>
+
+    <!--Auth Section String-->
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+
 </resources>
