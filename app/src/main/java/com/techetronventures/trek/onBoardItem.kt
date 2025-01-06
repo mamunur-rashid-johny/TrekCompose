@@ -3,7 +3,9 @@ package com.techetronventures.trek
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -39,12 +41,13 @@ fun OnBoardItem(
     )
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().padding(top = 40.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         LottieAnimation(
             composition = composition,
-            modifier = Modifier.size(300.dp).background(Color.Transparent),
+            modifier = Modifier
+                .size(250.dp),
             progress = { progress },
             contentScale = ContentScale.FillBounds,
             alignment = Alignment.Center

@@ -30,7 +30,6 @@ fun OnBoardScreen(modifier: Modifier = Modifier) {
         modifier = Modifier
             .fillMaxSize()
             .padding(start = 16.dp, end = 16.dp, top = 40.dp)
-            .background(Color.White)
             .statusBarsPadding()
             .navigationBarsPadding(),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -58,13 +57,13 @@ fun OnBoardScreen(modifier: Modifier = Modifier) {
         ) {
             repeat(pagerState.pageCount) { iteration ->
                 val color =
-                    if (pagerState.currentPage == iteration) Color.DarkGray else Color.LightGray
+                    if (pagerState.currentPage == iteration) Color.Green else Color.LightGray
                 Box(
                     modifier = Modifier
                         .padding(2.dp)
                         .clip(CircleShape)
                         .background(color)
-                        .size(16.dp)
+                        .size(8.dp)
                 )
             }
         }

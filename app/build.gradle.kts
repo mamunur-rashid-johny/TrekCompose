@@ -65,20 +65,20 @@ android {
     //</editor-fold>
 
     //<editor-fold desc = "SignedIn Config">
-    signingConfigs {
-        create("release"){
-            storeFile = file(keyProperties["keyStorePath"] as String)
-            storePassword = keyProperties["storePassword"] as String
-            keyPassword = keyProperties["keyPassword"] as String
-            keyAlias = keyProperties["kayAlias"] as String
-
-        }
-    }
+//    signingConfigs {
+//        create("release"){
+//            storeFile = file(keyProperties["keyStorePath"] as String)
+//            storePassword = keyProperties["storePassword"] as String
+//            keyPassword = keyProperties["keyPassword"] as String
+//            keyAlias = keyProperties["kayAlias"] as String
+//
+//        }
+//    }
     //</editor-fold>
 
     buildTypes {
         release {
-            signingConfig = signingConfigs["release"]
+          //  signingConfig = signingConfigs["release"]
            // isMinifyEnabled = true
            // isShrinkResources = true
             isDebuggable = false

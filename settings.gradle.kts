@@ -21,3 +21,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "Trek"
 include(":app")
+include(":core")
+include(":feature:auth:ui")
+include(":feature:auth:data")
+include(":feature:auth:domain")
+include(":feature:home:ui")
+include(":feature:home:data")
+include(":feature:home:domain")

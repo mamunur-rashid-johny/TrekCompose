@@ -21,6 +21,8 @@ ktlint_version = "12.1.2"
 composeNavigation = "2.8.5"
 lifecycle = "2.8.7"
 uiTextGoogleFonts = "1.7.6"
+appcompat = "1.7.0"
+material = "1.12.0"
 
 [libraries]
 androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
@@ -57,6 +59,8 @@ lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
 lifecycle-process = { group = "androidx.lifecycle", name = "lifecycle-process", version.ref = "lifecycle" }
 androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 
 [plugins]
@@ -65,6 +69,7 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ktlint = {id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint_version"}
+android-library = { id = "com.android.library", version.ref = "agp" }
 
 [bundles]
 compose = [

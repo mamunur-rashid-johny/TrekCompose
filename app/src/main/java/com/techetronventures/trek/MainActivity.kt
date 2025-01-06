@@ -54,9 +54,8 @@ class MainActivity : ComponentActivity() {
         installSplashScreen().setKeepOnScreenCondition { false }
         enableEdgeToEdge()
         setContent {
-            TrekTheme {
+            TrekTheme(dynamicColor = false) {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                  //  SplashScreen(modifier = Modifier.fillMaxSize(), paddingValues = innerPadding)
                     val color = if(isSystemInDarkTheme()) Color.Black else Color.White
                     OnBoardScreen(
                         modifier = Modifier.fillMaxSize().padding(innerPadding).background(color)

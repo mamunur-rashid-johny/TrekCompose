@@ -31,6 +31,7 @@ fun AuthButton(
 
     Row(
         modifier = modifier
+            .padding(bottom = 40.dp)
             .fillMaxWidth()
             .wrapContentHeight(),
         horizontalArrangement = Arrangement.SpaceEvenly,
@@ -45,9 +46,9 @@ fun AuthButton(
             Text(
                 text = stringResource(R.string.sign_up),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    fontSize = 16.sp,
+                    fontSize = 18.sp,
                     color = Color.Black,
-                    fontWeight = FontWeight.Medium
+                    fontWeight = FontWeight.SemiBold
                 )
             )
         }
@@ -65,8 +66,8 @@ fun AuthButton(
                 modifier = Modifier.padding(start = 10.dp, end = 10.dp),
                 text = stringResource(R.string.login),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.primary
                 )
             )
